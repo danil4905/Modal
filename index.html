@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modal window for summer practice">
+    <meta name="author" content="Danil_Konovalov">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Modal Coffe</title>
+</head>
+
+<body>
+    <div class="modal">
+        <section id="header">
+            <div class="logo">
+                <img id="logo-image" src="img/logo.jpg" alt="coffe">
+                <div class="button-back">
+                    <svg id="Capa_1" enable-background="new 0 0 482.239 482.239" height="18" width="18"
+                        viewBox="0 0 482.239 482.239" width="512" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m206.812 34.446-206.812 206.673 206.743 206.674 24.353-24.284-165.167-165.167h416.31v-34.445h-416.31l165.236-165.236z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="title">
+                <h1>Flat White</h1>
+                <p id="header-text">Freshly-ground beans and steamed milk</p>
+            </div>
+            <hr>
+            <div class="coffe-price">
+                <div class="total-price">$ 125</div>
+                <div class="counter">
+                    <button class="change-button minus-btn">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 409.6 409.6"
+                            width="12px" height="14px" style="enable-background:new 0 0 409.6 409.6;"
+                            xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path d="M392.533,187.733H17.067C7.641,187.733,0,195.374,0,204.8s7.641,17.067,17.067,17.067h375.467
+			c9.426,0,17.067-7.641,17.067-17.067S401.959,187.733,392.533,187.733z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                    <span id="count">1</span>
+                    <button class="change-button pluse-btn">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 341.4 341.4"
+                            style="enable-background:new 0 0 341.4 341.4;" width="12px" height="12px"
+                            xml:space="preserve">
+                            <g>
+                                <g>
+                                    <polygon
+                                        points="192,149.4 192,0 149.4,0 149.4,149.4 0,149.4 0,192 149.4,192 149.4,341.4 192,341.4 192,192 341.4,192 341.4,149.4" />
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="milk-option">
+            <div class="option-title">
+                <h2>Milk Option<span id="req"> (REQUIRED)</span></h2>
+
+            </div>
+            <div class="error">
+                <p>Please select 1 item</p>
+            </div>
+            <div class="items items-milk">
+                <ul class="items-list">
+                    <li>
+                        <label for="item-1" class="item-text">Full Milk</label>
+                        <input type="radio" id="item-1" checked name="milk-group"><label for="item-1"></label>
+                    </li>
+                    <hr>
+                    <li>
+                        <label for="item-2" class="item-text">Skim Milk</label>
+                        <input type="radio" id="item-2" name="milk-group"><label for="item-2"></label>
+                    </li>
+                    <hr>
+                    <li>
+                        <label for="item-3" class="item-text">Soy Milk<span class="item-price"> ($ 20)</span></label>
+                        <input type="radio" id="item-3" name="milk-group"><label for="item-3"></label>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="syrup-option">
+            <div class="option-title">
+                <h2>Syrup option</h2>
+                <span id="reset">reset</span>
+            </div>
+            <div class="items">
+                <ul class="items-list">
+                    <li>
+                        <label for="item-4" class="item-text">Nutty<span class="item-price"> ($ 10)</span></label>
+                        <input type="radio" id="item-4" name="syrup-group"><label for="item-4"></label>
+                    </li>
+                    <hr>
+                    <li>
+                        <label for="item-5" class="item-text">Cherry<span class="item-price"> ($ 10)</span></label>
+                        <input type="radio" id="item-5" name="syrup-group" checked><label for="item-5"></label>
+                    </li>
+                    <hr>
+                    <li>
+                        <label for="item-6" class="item-text">Chocolade<span class="item-price"> ($ 10)</span></label>
+                        <input type="radio" id="item-6" name="syrup-group">
+                        <label for="item-6"></label>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="chocolade-option">
+            <div class="option-title">
+                <h2>Chocolade</h2>
+
+            </div>
+            <div class="items items-milk">
+                <ul class="items-list">
+                    <li>
+                        <label for="item-7" class="item-text">Toblerone<span class="item-price"> ($ 70)</span></label>
+                        <input type="checkbox" id="item-7" checked><label for="item-7"></label>
+                    </li>
+                    <hr>
+                    <li>
+                        <label for="item-8" class="item-text">Patchi<span class="item-price"> ($ 60)</span></label>
+                        <input type="checkbox" id="item-8"><label for="item-8"></label>
+                    </li>
+                    <hr>
+                    <li>
+                        <label for="item-9" class="item-text">Spartak<span class="item-price"> ($ 40)</span></label>
+                        <input type="checkbox" id="item-9"><label for="item-9"></label>
+                    </li>
+                </ul>
+            </div>
+
+
+        </section>
+        <section id="cart">
+            <div class="cart-button">
+                <div class="cart-icon"><svg height="13pt" viewBox="0 -31 512.00033 512" width="13pt"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m166 300.003906h271.003906c6.710938 0 12.597656-4.4375 14.414063-10.882812l60.003906-210.003906c1.289063-4.527344.40625-9.390626-2.433594-13.152344-2.84375-3.75-7.265625-5.964844-11.984375-5.964844h-365.632812l-10.722656-48.25c-1.523438-6.871094-7.617188-11.75-14.648438-11.75h-91c-8.289062 0-15 6.710938-15 15 0 8.292969 6.710938 15 15 15h78.960938l54.167968 243.75c-15.9375 6.929688-27.128906 22.792969-27.128906 41.253906 0 24.8125 20.1875 45 45 45h271.003906c8.292969 0 15-6.707031 15-15 0-8.289062-6.707031-15-15-15h-271.003906c-8.261719 0-15-6.722656-15-15s6.738281-15 15-15zm0 0" />
+                        <path
+                            d="m151 405.003906c0 24.816406 20.1875 45 45.003906 45 24.8125 0 45-20.183594 45-45 0-24.8125-20.1875-45-45-45-24.816406 0-45.003906 20.1875-45.003906 45zm0 0" />
+                        <path
+                            d="m362.003906 405.003906c0 24.816406 20.1875 45 45 45 24.816406 0 45-20.183594 45-45 0-24.8125-20.183594-45-45-45-24.8125 0-45 20.1875-45 45zm0 0" />
+                    </svg></div>
+                <div class="cart-add">ADD 1 TO CART</div>
+                <div class="cart-total">$ 205</div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
