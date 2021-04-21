@@ -1,3 +1,15 @@
+$font-stack: 'Roboto',
+sans-serif;
+$basic-text-color: #373737;
+$basic-white: #fff;
+@import 'inputs';
+
+@mixin flexable ($x) {
+    display: flex;
+    justify-content: $x;
+    align-items: center;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,15 +18,14 @@
 
 body {
     background-color: #aeaeae;
-    font-family: 'Roboto',
-        sans-serif;
-    color: #373737;
+    font-family: $font-stack;
+    color: $basic-text-color;
 }
 
 .modal {
     margin: 25px auto;
     width: 300px;
-    background-color: #fff;
+    background-color: $basic-white;
     border-radius: 4px;
     font-weight: 300;
     -webkit-box-shadow: 0px 0px 37px 0px rgba(0, 0, 0, 0.75);
@@ -41,14 +52,6 @@ hr {
     position: relative;
 }
 
-li {
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
-    padding: 10px;
-    padding-left: 15px;
-}
-
 .title {
     padding: 20px;
 }
@@ -64,18 +67,14 @@ h1 {
 }
 
 .coffe-price {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexable (space-between);
     height: 40px;
     padding: 15px;
 }
 
 .counter {
     width: 90px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexable (space-around);
 }
 
 .change-button {
@@ -85,13 +84,11 @@ h1 {
     height: 20px;
     cursor: pointer;
     color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexable (center);
 }
 
 .change-button svg {
-    fill: #fff;
+    fill: $basic-white;
 }
 
 #minus-btn {
@@ -110,7 +107,7 @@ h1 {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: #fff;
+    background-color: $basic-white;
     border-radius: 100%;
     width: 25px;
     height: 25px;
@@ -131,8 +128,8 @@ h1 {
 .option-title {
     padding: 17px;
     height: 60px;
-    display: flex;
-    justify-content: space-between;
+    @include flexable (space-between);
+
 }
 
 #reset {
@@ -152,7 +149,6 @@ h1 {
     padding-left: 15px;
     font-size: 12px;
 }
-
 
 h2 {
     text-transform: uppercase;
@@ -177,74 +173,19 @@ h2 {
     cursor: pointer;
 }
 
-/* CUSTOM INPUT STYLES */
-
-[type="radio"]:checked,
-[type="checkbox"]:checked,
-[type="radio"]:not(:checked),
-[type="checkbox"]:not(:checked) {
-    position: absolute;
-    display: none;
-}
-
-[type="radio"]:checked+label,
-[type="checkbox"]:checked+label,
-[type="radio"]:not(:checked)+label,
-[type="checkbox"]:not(:checked)+label {
-    position: relative;
-    padding-left: 20px;
-    cursor: pointer;
+.items-list {
     line-height: 20px;
-    display: inline-block;
-    color: #707070;
 }
 
-[type="radio"]:checked+label:before,
-[type="checkbox"]:checked+label:before,
-[type="radio"]:not(:checked)+label:before,
-[type="checkbox"]:not(:checked)+label:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 10px;
-    height: 10px;
-    border: 2px solid #707070;
-    background: #fff;
+.item {
+    width: 300px;
+    height: 40px;
+    @include flexable (space-between);
+    font-size: 13px;
+    padding: 10px;
+    padding-left: 15px;
 }
 
-[type="radio"]:checked+label:before,
-[type="radio"]:not(:checked)+label:before,
-[type="radio"]:checked+label:after,
-[type="radio"]:not(:checked)+label:after {
-    border-radius: 100%;
-}
-
-[type="radio"]:checked+label:after,
-[type="checkbox"]:checked+label:after,
-[type="radio"]:not(:checked)+label:after,
-[type="checkbox"]:not(:checked)+label:after {
-    content: '';
-    width: 6px;
-    height: 6px;
-    background: #707070;
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    opacity: 0;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-
-}
-
-[type="radio"]:checked+label:after,
-[type="checkbox"]:checked+label:after {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
 
 #cart {
     padding: 20px;
@@ -254,28 +195,29 @@ h2 {
 .cart-button {
     background-color: #372922;
     height: 30px;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    color: $basic-white;
+    @include flexable (space-between);
     padding: 5px 15px 5px 15px;
     transition: all 0.2s ease;
     cursor: pointer;
 
-}
+    &:hover {
+        background-color: #291f03;
+    }
 
-.cart-button:hover {
-    background-color: #291f03;
+    &:active {
+        background-color: #1f1702;
 
+    }
 }
 
 .cart-icon img {
     height: 20px;
     width: 20px;
-    color: #fff;
+    color: $basic-white;
 
 }
 
 .cart-icon svg {
-    fill: white;
+    fill: $basic-white;
 }
