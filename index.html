@@ -32,9 +32,9 @@
             </div>
             <hr>
             <div class="coffe-price">
-                <div class="total-price">$ 125</div>
+                <div id="coffe-price">$ 125</div>
                 <div class="counter">
-                    <button class="change-button minus-btn">
+                    <button class="change-button" id="minus-btn">
                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 409.6 409.6"
                             width="12px" height="14px" style="enable-background:new 0 0 409.6 409.6;"
@@ -47,8 +47,8 @@
                             </g>
                         </svg>
                     </button>
-                    <span id="count">1</span>
-                    <button class="change-button pluse-btn">
+                    <span id="count"></span>
+                    <button class="change-button" id="pluse-btn">
                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 341.4 341.4"
                             style="enable-background:new 0 0 341.4 341.4;" width="12px" height="12px"
@@ -75,19 +75,19 @@
             </div>
             <div class="items items-milk">
                 <ul class="items-list">
-                    <li>
+                    <li class="item">
                         <label for="item-1" class="item-text">Full Milk</label>
-                        <input type="radio" id="item-1" checked name="milk-group"><label for="item-1"></label>
+                        <input class="option-item" type="radio" id="item-1" checked name="milk-group" value=0><label for="item-1"></label>
                     </li>
                     <hr>
-                    <li>
+                    <li class="item">
                         <label for="item-2" class="item-text">Skim Milk</label>
-                        <input type="radio" id="item-2" name="milk-group"><label for="item-2"></label>
+                        <input class="option-item" type="radio" id="item-2" name="milk-group" value=0><label for="item-2"></label>
                     </li>
                     <hr>
-                    <li>
+                    <li class="item">
                         <label for="item-3" class="item-text">Soy Milk<span class="item-price"> ($ 20)</span></label>
-                        <input type="radio" id="item-3" name="milk-group"><label for="item-3"></label>
+                        <input class="option-item" type="radio" id="item-3" name="milk-group" value=20><label for="item-3"></label>
                     </li>
                 </ul>
             </div>
@@ -100,19 +100,19 @@
             </div>
             <div class="items">
                 <ul class="items-list">
-                    <li>
+                    <li class="item">
                         <label for="item-4" class="item-text">Nutty<span class="item-price"> ($ 10)</span></label>
-                        <input type="radio" id="item-4" name="syrup-group"><label for="item-4"></label>
+                        <input class="option-item" type="radio" id="item-4" name="syrup-group" value=10><label for="item-4"></label>
                     </li>
                     <hr>
-                    <li>
+                    <li class="item">
                         <label for="item-5" class="item-text">Cherry<span class="item-price"> ($ 10)</span></label>
-                        <input type="radio" id="item-5" name="syrup-group" checked><label for="item-5"></label>
+                        <input class="option-item" type="radio" id="item-5" name="syrup-group" value=10 checked><label for="item-5"></label>
                     </li>
                     <hr>
-                    <li>
+                    <li class="item">
                         <label for="item-6" class="item-text">Chocolade<span class="item-price"> ($ 10)</span></label>
-                        <input type="radio" id="item-6" name="syrup-group">
+                        <input class="option-item" type="radio" id="item-6" name="syrup-group" value=10>
                         <label for="item-6"></label>
                     </li>
                 </ul>
@@ -126,19 +126,19 @@
             </div>
             <div class="items items-milk">
                 <ul class="items-list">
-                    <li>
+                    <li class="item">
                         <label for="item-7" class="item-text">Toblerone<span class="item-price"> ($ 70)</span></label>
-                        <input type="checkbox" id="item-7" checked><label for="item-7"></label>
+                        <input class="option-item" type="checkbox" id="item-7" value=70 checked><label for="item-7" ></label>
                     </li>
                     <hr>
-                    <li>
+                    <li class="item">
                         <label for="item-8" class="item-text">Patchi<span class="item-price"> ($ 60)</span></label>
-                        <input type="checkbox" id="item-8"><label for="item-8"></label>
+                        <input class="option-item" type="checkbox" id="item-8" value=60><label for="item-8"></label>
                     </li>
                     <hr>
-                    <li>
+                    <li class="item">
                         <label for="item-9" class="item-text">Spartak<span class="item-price"> ($ 40)</span></label>
-                        <input type="checkbox" id="item-9"><label for="item-9"></label>
+                        <input class="option-item" type="checkbox" id="item-9" value=40><label for="item-9"></label>
                     </li>
                 </ul>
             </div>
@@ -156,11 +156,12 @@
                         <path
                             d="m362.003906 405.003906c0 24.816406 20.1875 45 45 45 24.816406 0 45-20.183594 45-45 0-24.8125-20.183594-45-45-45-24.8125 0-45 20.1875-45 45zm0 0" />
                     </svg></div>
-                <div class="cart-add">ADD 1 TO CART</div>
-                <div class="cart-total">$ 205</div>
+                <div id="cart-add">ADD 1 TO CART</div>
+                <div id="cart-total">$ 205</div>
             </div>
         </section>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
