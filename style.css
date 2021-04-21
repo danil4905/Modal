@@ -94,11 +94,11 @@ h1 {
     fill: #fff;
 }
 
-.minus-btn {
+#minus-btn {
     background-color: #acacb1;
 }
 
-.pluse-btn {
+#pluse-btn {
     background-color: #9b6f4c;
 }
 
